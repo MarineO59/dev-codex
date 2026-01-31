@@ -1,16 +1,51 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 DevCodex
 
-Currently, two official plugins are available:
+DevCodex est une bibliothèque personnelle de snippets de code, conçue pour être simple, rapide et minimaliste. Le projet est inspiré par l'esthétique et la clarté de sites comme MDN et comprendre-git.com.
+🛠️ Évolution du Projet : Du Prototype au Pro
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Initialement conçu avec Tailwind CSS, ce projet a été entièrement refactorisé pour atteindre un niveau de contrôle supérieur :
 
-## React Compiler
+    Migration vers TypeScript : Sécurisation totale des données de snippets (interfaces rigoureuses).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    CSS Natif : Abandon de Tailwind au profit d'un design système en CSS pur, organisé par composants.
 
-## Expanding the ESLint configuration
+    Architecture Modulaire : Chaque composant possède désormais son propre dossier avec son style et ses types dédiés.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✨ Fonctionnalités
+
+    Gestion de Snippets : Ajout, recherche en temps réel et suppression de commandes.
+
+    Tableau de Bord : Visualisation des statistiques de votre bibliothèque via des graphiques dynamiques.
+
+    Persistance Locale : Sauvegarde automatique de vos données dans le navigateur via le localStorage.
+
+    Navigation Fluide : Système multi-pages géré par React Router.
+
+📂 Structure du Code (Refactorisé)
+
+L'arborescence suit désormais une logique de composants isolés :
+Plaintext
+
+src/
+├── components/      # Header, Sidebar, SnippetCard (TSX + CSS + Types)
+├── pages/           # Home, Stats, Settings
+├── layouts/         # MainLayout pour la structure globale
+├── data/            # Source de données initiale
+└── types/           # Définitions TypeScript globales
+
+🚀 Installation
+
+    Installer les dépendances
+    Bash
+
+    npm install
+
+    Lancer le serveur de développement
+    Bash
+
+    npm run dev
+
+💡 Pourquoi cette approche ?
+
+Le choix du TypeScript et du CSS pur permet de garantir que l'application reste légère et facile à faire évoluer sans dépendances lourdes, tout en offrant une auto-complétion parfaite durant le développement.
