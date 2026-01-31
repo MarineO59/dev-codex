@@ -1,0 +1,138 @@
+/* Container principal */
+.sidebar {
+	width: 16rem;
+	height: 100vh;
+	background-color: #0b1224;
+	border-right: 1px solid rgb(30 41 59);
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+}
+
+/* Logo */
+.sidebar__logo-container {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 2.5rem;
+}
+
+.sidebar__logo-icon {
+	width: 2rem;
+	height: 2rem;
+	background-color: rgb(37 99 235);
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	color: white;
+	box-shadow: 0 10px 15px -3px rgba(37 99 235 / 0.2);
+}
+
+.sidebar__logo-text {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: white;
+	letter-spacing: -0.025em;
+}
+
+/* Navigation */
+.sidebar__nav {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	font-size: 0.875rem;
+}
+
+/* Section */
+.sidebar__section-title {
+	font-size: 0.625rem;
+	font-weight: 700;
+	color: rgb(71 85 105);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 1rem;
+	padding: 0 0.5rem;
+}
+
+.sidebar__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Link item */
+.sidebar__link {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.625rem;
+	border-radius: 0.5rem;
+	transition: all 0.2s;
+	text-decoration: none;
+	color: rgb(148 163 184);
+}
+
+.sidebar__link:hover {
+	color: white;
+	background-color: rgba(30 41 59 / 0.4);
+}
+
+.sidebar__link--active {
+	background-color: rgb(30 41 59);
+	color: white;
+	box-shadow: 0 10px 15px -3px rgba(0 0 0 / 0.1);
+}
+
+/* Icônes colorées */
+.sidebar__icon--blue {
+	color: rgb(96 165 250);
+}
+
+.sidebar__icon--cyan {
+	color: rgb(34 211 238);
+}
+
+.sidebar__icon--yellow {
+	color: rgb(250 204 21);
+}
+
+.sidebar__icon--pink {
+	color: rgb(244 114 182);
+}
+
+.sidebar__icon--emerald {
+	color: rgb(52 211 153);
+}
+
+/* Footer */
+.sidebar__footer {
+	padding-top: 1.5rem;
+	border-top: 1px solid rgba(30 41 59 / 0.5);
+}
+
+.sidebar__session-card {
+	background-color: rgba(15 23 42 / 0.5);
+	border-radius: 0.75rem;
+	padding: 0.75rem;
+	border: 1px solid rgb(30 41 59);
+}
+
+.sidebar__session-label {
+	font-size: 0.625rem;
+	color: rgb(100 116 139);
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.sidebar__session-user {
+	font-size: 0.75rem;
+	color: rgb(203 213 225);
+	font-family: ui-monospace, monospace;
+}

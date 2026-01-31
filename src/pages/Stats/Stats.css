@@ -1,0 +1,111 @@
+/* Container principal */
+.stats {
+	padding: 2.5rem;
+	animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.stats__container {
+	max-width: 56rem;
+	margin: 0 auto;
+}
+
+/* Header */
+.stats__title {
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: white;
+	margin-bottom: 0.5rem;
+}
+
+.stats__subtitle {
+	color: rgb(100 116 139);
+	margin-bottom: 2rem;
+}
+
+/* Carte du graphique */
+.stats__chart-card {
+	background-color: #0b1224;
+	border: 1px solid rgb(30 41 59);
+	border-radius: 1rem;
+	padding: 2rem;
+	box-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
+	margin-bottom: 2rem;
+}
+
+.stats__chart-container {
+	height: 300px;
+	width: 100%;
+}
+
+/* Grille de cartes récapitulatives */
+.stats__summary-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.stats__summary-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Carte récapitulative */
+.stats__summary-card {
+	background-color: #0b1224;
+	border: 1px solid rgb(30 41 59);
+	padding: 1.5rem;
+	border-radius: 0.75rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.stats__card-label {
+	color: rgb(100 116 139);
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+}
+
+.stats__card-value {
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: white;
+	margin-top: 0.25rem;
+}
+
+.stats__card-value--emerald {
+	color: rgb(52 211 153);
+}
+
+/* Icône de carte */
+.stats__card-icon {
+	height: 3rem;
+	width: 3rem;
+	border-radius: 9999px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+}
+
+.stats__card-icon--blue {
+	background-color: rgba(59 130 246 / 0.1);
+	color: rgb(96 165 250);
+}
+
+.stats__card-icon--emerald {
+	background-color: rgba(52 211 153 / 0.1);
+	color: rgb(52 211 153);
+}

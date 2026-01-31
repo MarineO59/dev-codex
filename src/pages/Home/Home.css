@@ -1,0 +1,254 @@
+/* Container principal */
+.home {
+	padding: 2rem;
+	max-width: 56rem;
+	margin: 0 auto;
+	position: relative;
+	font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Header */
+.home__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2.5rem;
+}
+
+.home__title {
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: white;
+	letter-spacing: -0.025em;
+}
+
+.home__count {
+	color: rgb(100 116 139);
+	margin-top: 0.25rem;
+}
+
+/* Bouton d'ajout */
+.home__add-button {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: rgb(37 99 235);
+	color: white;
+	padding: 0.625rem 1.25rem;
+	border-radius: 0.75rem;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s;
+	box-shadow: 0 10px 15px -3px rgba(37 99 235 / 0.2);
+	font-weight: 500;
+}
+
+.home__add-button:hover {
+	background-color: rgb(59 130 246);
+}
+
+.home__add-button:active {
+	transform: scale(0.95);
+}
+
+/* Recherche */
+.home__search-container {
+	position: relative;
+	margin-bottom: 2.5rem;
+}
+
+.home__search-icon {
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: rgb(100 116 139);
+}
+
+.home__search-input {
+	width: 100%;
+	background-color: #0b1224;
+	border: 1px solid rgb(30 41 59);
+	border-radius: 1rem;
+	padding: 1rem 1rem 1rem 3rem;
+	color: white;
+	outline: none;
+	transition: all 0.2s;
+	box-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
+}
+
+.home__search-input:focus {
+	border-color: rgb(59 130 246);
+}
+
+.home__search-input::placeholder {
+	color: rgb(100 116 139);
+}
+
+/* Liste des snippets */
+.home__snippets-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+/* Message vide */
+.home__empty-state {
+	text-align: center;
+	padding: 5rem 0;
+	background-color: rgba(15 23 42 / 0.5);
+	border-radius: 1.5rem;
+	border: 2px dashed rgb(30 41 59);
+}
+
+.home__empty-text {
+	color: rgb(100 116 139);
+}
+
+/* Modale */
+.home__modal-overlay {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0 0 0 / 0.8);
+	backdrop-filter: blur(8px);
+	z-index: 50;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.home__modal {
+	background-color: #0f172a;
+	border: 1px solid rgb(30 41 59);
+	width: 100%;
+	max-width: 36rem;
+	border-radius: 1rem;
+	box-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.5);
+	padding: 2rem;
+	animation: modalIn 0.2s ease-out;
+}
+
+@keyframes modalIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Header de la modale */
+.home__modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.home__modal-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: white;
+}
+
+.home__modal-close {
+	color: rgb(100 116 139);
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0.5rem;
+	transition: color 0.2s;
+	display: flex;
+	align-items: center;
+}
+
+.home__modal-close:hover {
+	color: white;
+}
+
+/* Formulaire */
+.home__form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.home__form-field {
+	display: flex;
+	flex-direction: column;
+}
+
+.home__form-label {
+	display: block;
+	color: rgb(148 163 184);
+	font-size: 0.875rem;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+
+.home__form-input {
+	width: 100%;
+	background-color: rgb(15 23 42);
+	border: 1px solid rgb(51 65 85);
+	border-radius: 0.75rem;
+	padding: 0.75rem;
+	color: white;
+	outline: none;
+	transition: all 0.2s;
+}
+
+.home__form-input:focus {
+	border-color: rgb(59 130 246);
+}
+
+.home__form-input::placeholder {
+	color: rgb(100 116 139);
+}
+
+.home__form-textarea {
+	width: 100%;
+	background-color: rgb(15 23 42);
+	border: 1px solid rgb(51 65 85);
+	border-radius: 0.75rem;
+	padding: 0.75rem;
+	color: white;
+	font-family: ui-monospace, monospace;
+	font-size: 0.875rem;
+	height: 8rem;
+	outline: none;
+	resize: none;
+	transition: all 0.2s;
+}
+
+.home__form-textarea:focus {
+	border-color: rgb(59 130 246);
+}
+
+.home__form-textarea::placeholder {
+	color: rgb(100 116 139);
+}
+
+/* Bouton de sauvegarde */
+.home__save-button {
+	width: 100%;
+	background-color: rgb(37 99 235);
+	padding: 1rem;
+	border-radius: 0.75rem;
+	color: white;
+	font-weight: 700;
+	box-shadow: 0 10px 15px -3px rgba(37 99 235 / 0.2);
+	transition: all 0.2s;
+	border: none;
+	cursor: pointer;
+}
+
+.home__save-button:hover {
+	background-color: rgb(59 130 246);
+}
+
+.home__save-button:active {
+	transform: scale(0.98);
+}
